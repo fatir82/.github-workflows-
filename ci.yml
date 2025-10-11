@@ -1,0 +1,23 @@
+name: My First CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show current directory
+        run: pwd
+
+      - name: List all files
+        run: ls -la
+
+      - name: Say Hello
+        run: echo "✅ GitHub Actions is working fine!"
