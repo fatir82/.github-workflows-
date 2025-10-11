@@ -25,12 +25,6 @@ jobs:
       - name: Hello DevOps
         run: echo "👋 Hello DevOps from workflow!"
 
-      - name: Simple test
-        run: |
-          if [ -f test.txt ]; then
-            echo "📝 test.txt exists!"
-          else
-            echo "⚠️ test.txt does NOT exist!"
-            exit 1
-          fi
+      - name: Run simple test script
+        run: ./test.sh
 
